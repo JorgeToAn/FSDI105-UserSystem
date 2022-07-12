@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>User Registration</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="register.html" class="nav-link">Sign Up</a>
+            <a href="users.html" class="nav-link">Users</a>
+        </nav>
+        <h1>User registration system</h1>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <!--name, lastname, email, password, password confirm, payment, color, etc-->
+            <label for="txtFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control mb-3" id="txtFirstName" placeholder="Enter first name">
+
+            <label for="txtLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control mb-3" id="txtLastName" placeholder="Enter last name">
+
+            <label for="txtEmail" class="form-label">Email</label>
+            <input type="text" class="form-control mb-3" id="txtEmail" placeholder="Enter email">
+
+            <label for="txtPassword" class="form-label"></label>Password</label>
+            <input type="password" class="form-control mb-3" id="txtPassword" placeholder="Enter your password">
+
+            <label for="txtConfirmPass" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control mb-3" id="txtConfirmPass" placeholder="Confirm your password">
+
+            <label for="txtPayment" class="form-label">Payment</label>
+            <select class="form-select mb-3" id="txtPayment">
+                <option value="Cash">Cash</option>
+                <option value="Credit">Credit</option>
+                <option value="Paypal">Paypal</option>
+            </select>
+
+            <label for="txtColor" class="form-label">Color</label>
+            <input type="color" class="form-control form-control-color mb-3" id="txtColor">
+        </div>
+        <button class="btn btn-success" onclick="register();">Register</button>
+    </main>
+
+    <footer>
+        <!--info about the company-->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
