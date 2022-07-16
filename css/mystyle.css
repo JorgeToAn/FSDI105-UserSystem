@@ -1,0 +1,41 @@
+/* GLOBAL */
+body{
+    color: white;
+}
+
+p a{
+    text-decoration: none;
+}
+
+/* UTILITIES */
+.navbar-brand{
+    letter-spacing: .2rem;
+}
+
+div.form-container label{
+    font-weight: 700;
+    /* color: #cc0e24; */
+    color: #6933e8;
+}
+
+/* HEADER */
+header{
+    background-image: linear-gradient(to right, #1a153b, #54010b);
+    padding: 1rem 0 1rem 0;
+}
+header h1{
+    margin: 0;
+}
+
+/* MAIN */
+main{
+    background-color: #0d111c;
+    padding: 1rem 0 1rem 0;
+    min-height: 45rem;
+}
+
+/* FOOTER */
+footer{
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+}
