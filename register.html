@@ -36,9 +36,10 @@
 
     <main>
         <div class="container">
-            <p>Please fill out the following information.</p>
+            <button id="newUser" class="btn btn-success">Add new user</button>
 
-            <div class="form-container py-3">
+            <div id="registerForm" class="form-container py-3">
+                <p>Please fill out the following information.</p>
                 <div class="row row-cols-2">
                     <div class="col">
                         <label for="txtFirstName" class="form-label">First Name</label>
@@ -93,9 +94,9 @@
                         <input type="color" class="form-control form-control-color mb-3 w-100" id="txtColor">
                     </div>
                 </div>
+                <button class="btn btn-success w-100 mb-3" onclick="register();">Register</button>
+                <p>By signing up with us, you declare that you have read and agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.</p>
             </div>
-            <button class="btn btn-success w-100 mb-3" onclick="register();">Register</button>
-            <p>By signing up with us, you declare that you have read and agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.</p>
         </div>
     </main>
 

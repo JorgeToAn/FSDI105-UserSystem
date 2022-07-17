@@ -73,7 +73,29 @@ function clearForm(){
 }
 
 function init(){
-    console.log("init...");
+    //hiding the register form
+    $("#registerForm").hide();
+
+    //hook events
+    //showing the register form when the button is clicked
+    // $("#newUser").on("click", function(){
+    //     $("#registerForm").fadeIn(500);
+    // })
+
+    // //hiding the form on button click
+    // $("#hideForm").on("click", function(){
+    //     $("#registerForm").fadeOut(500);
+    // })
+
+    $("#newUser").on("click", function(){
+        $("#registerForm").fadeToggle(400, function(){
+            if($("#newUser").html()=="Add new user"){
+                $("#newUser").html("Hide registration");
+            } else{
+                $("#newUser").html("Add new user");
+            }
+        });
+    })
 }
 
 window.onload = init();

@@ -6,7 +6,6 @@ function saveUser(user){
 }
 function readUsers(){
     let data = localStorage.getItem(KEY);
-    console.log(data); //JSON
 
     if(!data){
         return [];
