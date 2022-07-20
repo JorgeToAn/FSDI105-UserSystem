@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/mystyle.css">
-    <title>Document</title>
+    <title>MARS - Home</title>
 </head>
 <body>
     <nav class="navbar  navbar-dark navbar-expand-lg bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand spaced" href="#">
                 <img src="images/mars-pixel.gif" alt="mars-icon" height="30">
                 MARS
             </a>
@@ -30,14 +30,64 @@
 
     <header>
         <div class="container">
-            <h1>Welcome to MARS</h1>
+            <h1>Welcome to <strong class="spaced">MARS</strong></h1>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <p>My Awesome Registration System, also known as <strong>MARS</strong>.</p>
+      <div class="container">
+        <div id="carousel" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://www.sciencenews.org/wp-content/uploads/2018/09/082418_MT_reviews_war_feat.jpg" class="d-block w-100" alt="..." max-height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="https://media.istockphoto.com/photos/mars-high-resolution-image-mars-is-a-planet-of-the-solar-system-with-picture-id1053794310?k=20&m=1053794310&s=612x612&w=0&h=jHyo4TVEoQ11MuLSHW3VLOEWNU-kV9DYPKonAcmtTPs=" class="d-block w-100" alt="..." max-height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="https://cdn.britannica.com/42/150642-138-2F8611E1/Erik-Gregersen-astronomy-astronaut-Encyclopaedia-Britannica-space.jpg?w=800&h=450&c=crop" class="d-block w-100" alt="..." max-height="500">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
+        <div class="welcome-text mt-3 mb-4">
+          <p class="fs-5">This is <i>My Awesome Registration System</i>, also known as <strong class="spaced">MARS</strong>. In <strong class="spaced">MARS</strong> you can create a user, log in with your credentials and display other users registered that exist in your local storage.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aperiam ad enim provident accusamus quasi quia mollitia, eligendi id, fuga nemo cupiditate optio inventore rem, excepturi placeat ex vero voluptates?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum beatae ad ea nemo aliquam, quod officiis at porro aperiam vero? Autem eum perspiciatis tempora est provident ratione doloribus voluptatibus quam.</p>
+        </div>
+
+        <div id="loginForm" class="w-50 mx-auto my-5">
+          <div class="row mb-3 text-center">
+            <h2>Get Started</h2>
+          </div>
+          <div class="row mb-2">
+            <input type="text" class="form-control" id="loginEmail" placeholder="Email">
+          </div>
+          <div class="row mb-2">
+            <input type="password" class="form-control" id="loginPass" placeholder="Password">
+          </div>
+          <div class="row mb-2">
+            <button id="loginBtn" class="btn btn-success">Log In</button>
+          </div>
+          <div class="row mb-4 text-center">
+            <span id="warning">Invalid credentials</span>
+            <p class="m-0">Not registered? <a href="register.html">Sign up</a>.</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="bg-dark">
@@ -49,6 +99,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/storeManager.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>

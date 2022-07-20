@@ -28,7 +28,7 @@ class User{
             $("#txtEmail").addClass("is-invalid");
             valid = false;
         }
-        if(this.password.length==0){
+        if(this.password.length<7){
             $("#txtPassword").addClass("is-invalid");
             $("#txtConfirmPass").addClass("is-invalid");
             valid = false;
@@ -70,32 +70,41 @@ function clearForm(){
     $("#txtEmail").val("");
     $("#txtPassword").val("");
     $("#txtConfirmPass").val("");
+    $("#warning-span").html("");
+}
+
+function validatePassword(){
+    let elementPass = $("#txtPassword");
+    let password = elementPass.val();
+    let warningSpan = $("#pass-warning");
+
+    if(password.length<7 ){
+        elementPass.css("border-color","#ff3d43");
+        warningSpan.html("Password level: LOW");
+        warningSpan.css("color","#ff3d44")
+    } else{
+        elementPass.css("border-color","#49f569");
+        elementPass.removeClass("is-invalid");
+        warningSpan.html("Password level: HIGH");
+        warningSpan.css("color","#49f569");
+    }
 }
 
 function init(){
     //hiding the register form
     $("#registerForm").hide();
 
-    //hook events
-    //showing the register form when the button is clicked
-    // $("#newUser").on("click", function(){
-    //     $("#registerForm").fadeIn(500);
-    // })
-
-    // //hiding the form on button click
-    // $("#hideForm").on("click", function(){
-    //     $("#registerForm").fadeOut(500);
-    // })
-
     $("#newUser").on("click", function(){
         $("#registerForm").fadeToggle(400, function(){
-            if($("#newUser").html()=="Add new user"){
+            if($("#newUser").html()=="Sign up"){
                 $("#newUser").html("Hide registration");
             } else{
-                $("#newUser").html("Add new user");
+                $("#newUser").html("Sign up");
             }
         });
     })
+
+    $("#txtPassword").keyup(validatePassword);
 }
 
-window.onload = init();
+window.onload = init;

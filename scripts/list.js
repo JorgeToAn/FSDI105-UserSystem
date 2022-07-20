@@ -22,4 +22,4 @@ function init(){
     displayUsers(users);
     //hook events
 }
-window.onload = init();
+window.onload = init;

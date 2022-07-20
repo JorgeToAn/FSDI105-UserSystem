@@ -6,16 +6,31 @@ body{
 p a{
     text-decoration: none;
 }
-
-/* UTILITIES */
-.navbar-brand{
-    letter-spacing: .2rem;
+h2{
+    font-weight: 700;
 }
 
+/* UTILITIES */
 div.form-container label{
     font-weight: 700;
     /* color: #6933e8; */
     color: #7b42ff;
+}
+div#loginForm{
+    background-color: #151830;
+    border-radius: 8px;
+    padding: 1rem 3rem .2rem 3rem;
+}
+.hidden{
+    display: none;
+}
+.spaced{
+    letter-spacing: .2rem;
+}
+#warning{
+    /* color: #ff3d44; */
+    background-color: #ff3d44;
+    border-radius: 5px;
 }
 
 /* HEADER */
